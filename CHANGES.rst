@@ -9,6 +9,12 @@ Changelog
 - Add a __main__.py so that wifi can be invoked using python -mwifi
 - Fix argument parsing so that scan is the default argument even with options passed
 
+0.3.9
+^^^^^
+:release-date: 2018-12-26
+
+- Make the code compliant with Python 3.3 or higher (@nicolargo)
+
 0.3.8
 ^^^^^
 :release-date: 2016-03-11

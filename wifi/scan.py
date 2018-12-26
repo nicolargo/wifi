@@ -6,6 +6,9 @@ import textwrap
 import wifi.subprocess_compat as subprocess
 from wifi.utils import db2dbm
 from wifi.exceptions import InterfaceError
+import sys
+
+PY3 = sys.version_info[0] == 3
 
 
 class Cell(object):
@@ -42,6 +45,8 @@ class Cell(object):
         else:
             iwlist_scan = iwlist_scan.decode('utf-8')
         cells = map(Cell.from_string, cells_re.split(iwlist_scan)[1:])
+        if PY3:
+            cells = list(cells)
 
         return cells
 

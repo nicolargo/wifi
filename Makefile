@@ -3,6 +3,10 @@ PORT?=8008
 test:
 	python setup.py test
 
+test3:
+	 ~/virtualenv/glances-python3.6/bin/python setup.py test
+
+
 docs:
 	cd docs && $(MAKE) html
 
